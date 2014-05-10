@@ -8,7 +8,7 @@
 FROM dockerfile/ubuntu
 
 # Install LXDE and VNC server.
-RUN apt-get install -y lxde-core lxterminal tightvncserver
+RUN DEBIAN_FRONTEND=noninteractive apt-get install -y lxde-core lxterminal tightvncserver
 
 # Define mountable directories.
 VOLUME ["/data"]

@@ -20,4 +20,8 @@ This repository contains **Dockerfile** of [Ubuntu Desktop (LXDE)](http://lxde.o
 
 ### Usage
 
-    docker run -it --rm dockerfile/ubuntu-desktop
+    docker run -it --rm -p 5901:5901 dockerfile/ubuntu-desktop
+
+    USER=root vncserver :1 -geometry 1280x800 -depth 24
+
+* Connect to desktop: `vnc://<host>:5901`
